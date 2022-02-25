@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid"  style="margin-top:75px">
+  <div class="rounded d-flex justify-content-center">
+    <div class="col-md-4 col-sm-12 p-7">
+      <div class="text-center">
+        <h3 class="text-success">Register User</h3>
+      </div>
+
+      <form method="POST" action="">{% csrf_token %}
+        <div class="p-4">
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="username" name="username" placeholder="username">
+            <label for="username">Username</label>
+            <div id="usernameHelpBlock" class="form-text">
+              <p>Username can contain any letters or numbers, without spaces</p>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email_id" name="email" placeholder="email-id">
+            <label for="email_id">Email ID</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="password">
+            <label for="password">Password</label>
+            <div id="usernameHelpBlock" class="form-text">
+              <p>Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</p>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password_conf" name="password_conf" placeholder="confirm password">
+            <label for="password_conf">Confirm Password</label>
+            <div id="usernameHelpBlock" class="form-text">
+              <p>Re-enter the password to confirm</p>
+            </div>
+          </div>
+
+          <input class="btn btn-success text-center mt-2" type="submit" value="Register" />
+
+            <p class="mt-5">Already have an account?
+              <a class="text-success" href="">Log In</a>
+            </p>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
