@@ -1,0 +1,32 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Online Academy management system.">
+    <meta name="author" content="Muhammad Faisal">
+
+    <title>Academy Management System</title>
+
+    <link href="{% static 'styles/bootstrap.css' %}" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          {% block content %}
+
+          {% endblock %}
+
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  </body>
+</html>
