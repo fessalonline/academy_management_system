@@ -38,6 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'ams.apps.admissions',
+    'ams.apps.fees',
+    'ams.apps.timetable',
+    'ams.apps.accounts',
+    'ams.apps.users',
+    'ams.apps.exams',
+    'ams.apps.results',
+    'ams.apps.attendance',
+
 ]
 
 MIDDLEWARE = [
